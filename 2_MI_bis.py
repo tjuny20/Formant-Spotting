@@ -2,8 +2,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 import time
-from MI_experiment import MI_experiment
-import os
+from tools.MI_experiment import MI_experiment
 
 start_time = time.time()
 

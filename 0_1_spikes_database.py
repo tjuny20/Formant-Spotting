@@ -1,6 +1,6 @@
 import os
 import numpy as np
-import formant_utils
+from tools import formant_utils
 import time
 
 start_time = time.time()

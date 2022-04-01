@@ -4,10 +4,9 @@ import nengo
 import thorns as th
 import pandas
 import matplotlib.pyplot as plt
-from All_to_All_TDE_wights import getAllToAllTdeWights2
-import formant_utils
+from tools.TDE_weights import getAllToAllTdeWights2
 from nengo_extras.plot_spikes import (
-    cluster, merge, plot_spikes, preprocess_spikes, sample_by_variance)
+    plot_spikes)
 
 
 class TDE(object):
@@ -211,7 +210,7 @@ class model(object):
         output = []
 
         #Load of the formants
-        path = os.path.join('waves/800hz', word)
+        path = os.path.join('database/waves/800hz', word)
         files = os.listdir(path)
 
         m = matlab_load.load_spikes2(self.word, self.dt)
@@ -264,7 +263,7 @@ class model(object):
         return input, output, tde_on
 
     def saveData(self, trains, file_name):
-        cache_path = 'TDE_spikes/{}/{}'.format(self.word, file_name)
+        cache_path = 'database/spikes/{}/{}'.format(self.word, file_name)
 
         # convert the input from time X train
         spikeTimes = []

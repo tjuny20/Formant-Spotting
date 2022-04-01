@@ -1,13 +1,10 @@
 
 import os
-import csv
 import numpy as np
-from matplotlib import pyplot as plt
-import pandas as pd
-import formant_utils
+from tools import formant_utils
 import time
-from model import TDE
-from All_to_All_TDE_wights import getAllToAllTdeWights2
+from tools.model import TDE
+from tools.TDE_weights import getAllToAllTdeWights2
 import nengo
 from pyentropy import SortedDiscreteSystem
 start_time = time.time()

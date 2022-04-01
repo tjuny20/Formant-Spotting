@@ -1,15 +1,7 @@
-import os.path
-
 import numpy as np
 from matplotlib import pyplot as plt
-import pandas as pd
-import formant_utils
 import time
-from model import TDE
-from All_to_All_TDE_wights import getAllToAllTdeWights2
-import nengo
-from pyentropy import SortedDiscreteSystem
-from MI_experiment import MI_experiment
+from tools.MI_experiment import MI_experiment
 start_time = time.time()
 
 '''

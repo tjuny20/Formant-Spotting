@@ -1,8 +1,8 @@
 import os
 import numpy as np
-import formant_utils
+from tools import formant_utils
 from model import TDE
-from All_to_All_TDE_wights import getAllToAllTdeWights2
+from tools.TDE_weights import getAllToAllTdeWights2
 import nengo
 from pyentropy import SortedDiscreteSystem
 
@@ -38,7 +38,7 @@ class MI_experiment(object):
         outputs_tr = []
 
         # load files
-        path = os.path.join('waves/800hz', keyword)
+        path = os.path.join('database/waves/800hz', keyword)
         files = os.listdir(path)[0:N_training]
 
         for file in files:
@@ -108,7 +108,7 @@ class MI_experiment(object):
         for word in words_test:
 
             # load files
-            path = os.path.join('waves/800hz', word)
+            path = os.path.join('database/waves/800hz', word)
             files = os.listdir(path)[self.N_training:N_test + self.N_training]
 
             for file in files:
@@ -209,7 +209,7 @@ class MI_experiment(object):
         for word in words_test:
 
             # load files
-            path = os.path.join('waves/800hz', word)
+            path = os.path.join('database/waves/800hz', word)
             files = os.listdir(path)[self.N_training:N_test + self.N_training]
 
             for file in files:

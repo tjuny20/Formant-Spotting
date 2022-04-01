@@ -1,12 +1,6 @@
 import os
-import csv
-import numpy as np
-from matplotlib import pyplot as plt
-import pandas as pd
-import formant_utils
+from tools import formant_utils
 import time
-import model
-
 
 #words = ['one', 'two', 'three', 'four']
 words = ['one']
@@ -20,12 +14,12 @@ start_time = time.time()
 
 for word in words:
     #load files
-    path = os.path.join('data/waves/800hz', word)
+    path = os.path.join('../database/waves/800hz', word)
     files = os.listdir(path)
 
     for file in files[0:1]:
         # vars to store the formant tracks
-        spikes = formant_utils.formant_to_spikes_v2(os.path.join(path,file), n_channels, max_freq, thresh_frac, n_formants=n_formants)
+        spikes = formant_utils.formant_to_spikes_v2(os.path.join(path, file), n_channels, max_freq, thresh_frac, n_formants=n_formants)
         print(spikes)
 
 
