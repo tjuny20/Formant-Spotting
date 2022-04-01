@@ -26,14 +26,14 @@ main program
 for word in words:
 
     # load files
-    path = os.path.join('waves/800hz', word)
+    path = os.path.join('database/waves/800hz', word)
     files = os.listdir(path)[0:N_words]
 
     for file in files:
         # Load formant spikes
         m = formant_utils.formant_to_spikes_v2(os.path.join(path, file), N_channels, max_freq, thresh_frac,
                                                n_formants=n_formants)
-        np.savetxt("formant_spikes/{}/{}".format(word, file), m, delimiter=",")
+        np.savetxt("database/spikes/{}/{}".format(word, file), m, delimiter=",")
 
 
 end_time = time.time()

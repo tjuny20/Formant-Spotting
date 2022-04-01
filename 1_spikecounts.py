@@ -62,7 +62,7 @@ inputs_tr = []
 outputs_tr = []
 
 # load files
-path = os.path.join('waves/800hz', keyword)
+path = os.path.join('database/waves/800hz', keyword)
 files = os.listdir(path)[0:N_training]
 
 for file in files:
@@ -114,7 +114,7 @@ for word in words_test:
     outputs_test = []
 
     # load files
-    path = os.path.join('waves/800hz', word)
+    path = os.path.join('database/waves/800hz', word)
     files = os.listdir(path)[N_training:N_test+N_training]
 
     for file in files:

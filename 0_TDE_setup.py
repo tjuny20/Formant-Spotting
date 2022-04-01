@@ -50,7 +50,7 @@ inputs_tr = []
 outputs_tr = []
 
 # load files
-path = os.path.join('waves/800hz', word)
+path = os.path.join('database/waves/800hz', word)
 files = os.listdir(path)[0:N_words]
 
 for file in files:
