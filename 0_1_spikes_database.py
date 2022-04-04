@@ -1,27 +1,27 @@
+"""
+0.1 - SPIKES DATABASE
+
+This script is used to convert the formant matrices in 'database/waves' to spike trains stored in
+'database/spikes'.
+"""
+
 import os
 import numpy as np
 from tools import formant_utils
 import time
-
 start_time = time.time()
 
-'''
-PARAMETERS:
-'''
-# Formants extraction params
+# Formant extraction parameters
 N_channels = 32
 max_freq = 8000
 n_formants = 4
 thresh_frac = 0.05
 dt = 0.001
-
-
-# Params
 words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 N_words = 1
 
 '''
-main program
+Main program
 '''
 for word in words:
 

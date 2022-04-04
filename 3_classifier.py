@@ -24,12 +24,12 @@ max_dist = 3
 
 # Params training
 keyword = 'one'
-N_training = 400
+N_training = 20
 ch_selected = [0.01, 0.02, 0.04, 0.06, 0.1, 0.2]
 
 # Params testing
 words_test = ['one', 'seven', 'two', 'three', 'four', 'five', 'six', 'eight']
-N_test = 100
+N_test = 2
 factor_threshold = np.arange(-2.5, 3., 0.1)
 
 '''

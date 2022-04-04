@@ -1,7 +1,7 @@
 import os
 import numpy as np
 from tools import formant_utils
-from model import TDE
+from tools.model import TDE
 from tools.TDE_weights import getAllToAllTdeWights2
 import nengo
 from pyentropy import SortedDiscreteSystem
