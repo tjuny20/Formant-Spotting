@@ -35,7 +35,7 @@ n_trig2 = 8
 
 # Params
 word = 'one'
-N_words = 1
+N_words = 5
 
 '''
 main program
@@ -57,7 +57,6 @@ for file in files:
     # Load formant spikes
     m = formant_utils.formant_to_spikes_v2(os.path.join(path, file), N_channels, max_freq, thresh_frac,
                                            n_formants=n_formants)
-    formant_utils.plot_matrix(m)
 
     # Save formant spikecounts
     counts = np.sum(m, axis=0)
@@ -80,7 +79,7 @@ for file in files:
             m = np.delete(m, i - count, 1)
             count += 1
 
-    #formant_utils.plot_matrix(m)
+    formant_utils.plot_matrix(m)
 
 end_time = time.time()
 

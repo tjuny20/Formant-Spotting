@@ -35,12 +35,12 @@ n_trig2 = 11
 
 # Params training
 keyword = 'one'
-N_training = 1
+N_training = 20
 ch_selected = 0.10
 
 # Params testing
 words_test = ['one', 'two', 'three', 'four']
-N_test = 1
+N_test = 4
 
 '''
 main program
@@ -48,7 +48,7 @@ main program
 # Setting the TDE layer
 w_fac, w_trig, tde_on = getAllToAllTdeWights2(N_channels, w_fac_value=w_fac, w_trig_value=w_trig,
                                              tau_fac=tau_fac, tau_trig=tau_trig, scale_w=scale_w, max_dist=max_dist)
-TDESolver = TDE(w_fac, w_trig, tau_fac=tau_fac, tau_trig=tau_trig, soma_type=nengo.LIF())
+TDESolver = TDE(N_channels, w_fac, w_trig, tau_fac=tau_fac, tau_trig=tau_trig, soma_type=nengo.LIF())
 
 # File to save spikecounts
 filename = '0'
