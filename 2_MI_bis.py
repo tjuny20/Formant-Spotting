@@ -18,7 +18,7 @@ threshold_formant = 0.05
 dt = 0.001
 
 # TDEs params
-configs = [33]
+configs = [1]
 w_fac = [50000]
 tau_fac = [0.008]
 w_trig = [50000]

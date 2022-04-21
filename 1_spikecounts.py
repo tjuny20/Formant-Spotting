@@ -42,20 +42,12 @@ n_trig2 = 11
 
 # Params training
 keyword = 'one'
-<<<<<<< HEAD
 N_training = 10
-=======
-N_training = 20
->>>>>>> 557efcf33a759eef9d9fb614ed9c9d88625d6ae5
 ch_selected = 0.10
 
 # Params testing
 words_test = ['one', 'two', 'three', 'four']
-<<<<<<< HEAD
 N_test = 5
-=======
-N_test = 4
->>>>>>> 557efcf33a759eef9d9fb614ed9c9d88625d6ae5
 
 '''
 main program
