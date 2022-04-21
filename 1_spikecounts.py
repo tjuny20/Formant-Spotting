@@ -1,3 +1,10 @@
+"""
+1 - spikecounts
+
+This script is used to test the hypothesis of classifying the stimulus by the spikecounts in the most spiking channels
+for a certain keyword.
+"""
+
 
 import os
 import numpy as np
@@ -35,12 +42,20 @@ n_trig2 = 11
 
 # Params training
 keyword = 'one'
+<<<<<<< HEAD
+N_training = 10
+=======
 N_training = 20
+>>>>>>> 557efcf33a759eef9d9fb614ed9c9d88625d6ae5
 ch_selected = 0.10
 
 # Params testing
 words_test = ['one', 'two', 'three', 'four']
+<<<<<<< HEAD
+N_test = 5
+=======
 N_test = 4
+>>>>>>> 557efcf33a759eef9d9fb614ed9c9d88625d6ae5
 
 '''
 main program
@@ -108,6 +123,7 @@ ind_maxspikes_tde = formant_utils.ind_most_spikes(outputs_tr, n_ch_tde)
 TESTING:
 '''
 
+text = []
 for word in words_test:
     # Variables to store spikes
     inputs_test = []
@@ -158,10 +174,13 @@ for word in words_test:
     for i in ind_maxspikes_tde:
         sum_tde += outputs_test[i]
 
-    print('Word: {}  Spikecount formant: {}  Spikecount TDE: {}\n'.format(word, sum_formant, sum_tde))
+    text.append([word, sum_formant, sum_tde])
     #txt.write('Word: {}  Spikecount formant: {}  Spikecount TDE: {}\n'.format(word, sum_formant, sum_tde))
-
 
 end_time = time.time()
 
 print('Time:', end_time - start_time)
+print('keyword: {}'.format(keyword))
+print('[Word, Spikecount formant, Spikecount TDE]')
+for i in range(len(text)):
+    print(text[i])
