@@ -42,7 +42,7 @@ n_trig2 = 11
 
 # Params training
 keyword = 'one'
-N_training = 10
+N_training = 20
 ch_selected = 0.10
 
 # Params testing
